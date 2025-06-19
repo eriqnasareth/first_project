@@ -5,21 +5,34 @@ date: "2025-06-19"
 output: pdf_document
 ---
 
-\begin{center}
-\textbf{\LARGE Universidade de Brasília}\\[0.5cm] 
-\textbf{\large Departamento de Estatística}\\[0.2cm]
-\vspace{20pt}
-\includegraphics{Logo_UnB.png}\\[1cm]
 
-\par
-\vspace{32pt}
-\textbf{\LARGE Projeto Demógrafo}\\
-\vspace{30pt}
-\textbf {\Large Autores:}\\[0.2cm]
-\Large {Erick Nasareth 190127881}\\[0.1cm]
+\ProvidesPackage{capa}[2014/09/01 Criacao desta customizacao do abnTeX2]
 
-
-\end{center}
+% alterando a capa
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    \includegraphics[width=70mm]{Logo_UnB.png}\\[0.2cm]
+    \ABNTEXchapterfont\huge Universidade de Brasília\\
+    \ABNTEXchapterfont\large Faculdade de Tecnologia\\
+    \ABNTEXchapterfont\large Departamento de Engenharia Elétrica\\[2cm]
+    \vspace*{1cm}
+    {\ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo}\\[2cm]
+    \vfill
+    \begin{center}
+    \ABNTEXchapterfont\large\imprimirautor\\[0.5cm]
+    \ABNTEXchapterfont\large \textbf{Área de concentração:} Sua área\\%area de concentracao
+    \ABNTEXchapterfont\large \textbf{Linha de pesquisa:} Sua linha\\%linha de pesquisa
+    \ABNTEXchapterfont\large \textbf{Tema:} Seu tema\\[2cm]%tema
+    \ABNTEXchapterfont\large Orientador\\
+     \ABNTEXchapterfont\large\imprimirorientador
+    \end{center}
+    \vfill
+    \large\imprimirlocal
+    \large\imprimirdata
+    \vspace*{1cm}
+  \end{capa}
+}
 
 
 ```{r setup, include=FALSE}
